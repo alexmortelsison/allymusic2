@@ -32,7 +32,13 @@ export default function Navbar() {
         src={"/hero4.png"}
         alt="hero"
         fill
-        className="object-cover -z-50"
+        className="object-cover -z-50 lg:block"
+      />
+      <Image
+        src={"/m1.png"}
+        alt="hero"
+        fill
+        className="object-cover -z-50 lg:hidden"
       />
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-center items-center">
@@ -77,14 +83,17 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-90 pl-24 flex">
-        <Link href={"/upcoming"}>
-          <button className="border px-8 py-2 rounded-full cursor-pointer border-b-cyan-400 border-t-pink-600 border-l-cyan-500 border-r-pink-500 text-sm fontb">
-            More info
+      <div className="absolute bottom-90 lg:pl-24 md:pl-121  pl-64 flex">
+        <Link href={"/next-event"}>
+          <button className="p-[3px] relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+            <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+              More Info
+            </div>
           </button>
         </Link>
       </div>
-      <div className="absolute bottom-30 pl-12 flex">
+      <div className="absolute bottom-5 md:pl-38 lg:bottom-50 lg:pl-12 md:bottom-5 flex">
         <CountdownPage />
       </div>
     </nav>

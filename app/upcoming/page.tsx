@@ -29,7 +29,20 @@ export default function UpcomingPage() {
   const pathName = usePathname();
   return (
     <nav className="font-sans bg-transparent">
-      <Image src={"/up.png"} alt="hero" fill className="object-cover -z-50" />
+      <Image
+        src={"/d.png"}
+        alt="hero"
+        fill
+        className="object-cover -z-50 hidden lg:block"
+        priority
+      />
+      <Image
+        src={"/m2.png"}
+        alt="hero"
+        fill
+        className="object-cover -z-50 lg:hidden"
+        priority
+      />
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-center items-center">
           <div className="space-x-4">
@@ -72,14 +85,6 @@ export default function UpcomingPage() {
             ))}
           </div>
         </div>
-      </div>
-      <div className="absolute bottom-20 right-30 flex">
-        <video
-          src="/vid.mp4"
-          className="w-[600px] rounded-4xl border"
-          loop
-          autoPlay={true}
-        />
       </div>
     </nav>
   );
